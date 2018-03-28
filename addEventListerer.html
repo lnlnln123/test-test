@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>addEventListerer</title>
+	<style>
+		#div1{
+			width: 800px;
+			height:800px;
+			background: #ccc;
+			margin:0 auto;
+			text-align: center;
+		}
+
+		#div2{
+			width: 600px;
+			height: 600px;
+			background: #E5E7CF;
+		}
+		#div3{
+			width: 400px;
+			height: 400px;
+			background: #8AA8A5;
+		}
+		#div4{
+			width: 200px;
+			height: 200px;
+			background:#2AAC7D;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">111
+		<div id="div2">222
+			<div id="div3">333
+				<div id="div4">444</div>
+			</div>
+		</div>
+	</div>
+	<div id="div5">555</div>
+	<script src="http://zhcdn01.xoyo.com/assets/lib/jquery/jquery.1.7.2.js"></script>
+	<script>
+	    
+	    var myDiv1 = document.getElementById('div1');
+	    var myDiv2 = document.getElementById('div2');
+	    var myDiv3 = document.getElementById('div3');
+		var myDiv4 = document.getElementById('div4');
+		var myDiv5 = document.getElementById('div5');
+
+		function div1(){
+			console.log('div1');
+		}
+		function div2(){
+			console.log('div2');
+		}
+		function div3(){
+			console.log('div3');
+		}
+		function div4(){
+			event.stopPropagation();
+			console.log('div4');
+		}
+		function div5(){
+			console.log('div5');
+		}
+		
+	    myDiv1.addEventListener('click',div1,false);
+		myDiv2.addEventListener('click',div2,false);
+		myDiv3.addEventListener('click',div3,false);
+		myDiv4.addEventListener('click',div4,false);
+
+
+		// $('#div1').click(function(){
+
+		// 	console.log('div1');
+		// });
+		// $('#div2').click(function(){
+		// 	console.log('div2');
+		// });
+		// $('#div3').click(function(){
+		// 	console.log('div3');
+		// });
+		// $('#div4').click(function(){
+         
+		// 	console.log('div4');
+		// });
+		// $('#div5').click(function(){
+		// 	console.log('div5');
+		// });
+	</script>
+</body>
+</html>
